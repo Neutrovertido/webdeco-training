@@ -1,0 +1,25 @@
+/* Twist Files Stylesheet */
+
+/* Dark Mode Font Behavior */
+*{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.fancy_title h2{
+    display: inline;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.fancy_title #r{
+    color: red;
+}
+
+.fancy_title #g{
+    color: rgb(0, 255, 0)
+}
+
+.fancy_title #b{
+    color: #0000FF;
+}
