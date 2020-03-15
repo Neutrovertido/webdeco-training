@@ -23,3 +23,7 @@
 .fancy_title #b{
     color: #0000FF;
 }
+
+p {
+    background-color: firebrick;
+}
