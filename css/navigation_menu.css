@@ -1,0 +1,40 @@
+/* Tags that I like to put on everytime */
+
+*{
+    color: white;
+    font-family: Helvetica, sans-serif, Arial;
+    font-size: 40px;
+}
+
+body{
+    background: black;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+/* Dropdown Menu class tags and attributes */
+
+.menu{
+    width: 100%;
+    background: deepskyblue;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li{
+    display: inline-block;
+}
+
+.menu li a {
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.menu li a:hover{
+    color: deepskyblue;
+    background-color: gray;
+}
