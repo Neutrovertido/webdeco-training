@@ -25,13 +25,13 @@ a {
 
 a:hover {
     /* This is also a link state, tho this one is used! */
-    color: #1d64a6;
-    box-shadow: 0px 3px 0px #1d64a6;
+    color: crimson;
+    box-shadow: 0px 3px 0px crimson;
 }
 
 a:active {
     color: white;
-    background: grey;
+    background: crimson;
     box-shadow: none;
 }
 
@@ -64,4 +64,22 @@ p {
     letter-spacing: normal;
     word-spacing: 7px;
     text-shadow: 5px 5px 5px black;
+}
+
+div {
+    width: 100%;
+}
+
+img {
+    width: 30%;
+    height: auto;
+    margin: auto;
+    display: block;
+    border-radius: 50px;
+    /* Dynamic Shadows for borders :D */
+    box-shadow: 5px 5px 0px crimson;
+    
+    /* Border space by padding: padding: 5px;
+    Border size:border: 2px solid white;
+    This one also is dynamic bordering! :D */
 }
