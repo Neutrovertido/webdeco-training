@@ -25,5 +25,14 @@
 }
 
 p {
-    background-color: firebrick;
+    background-color: grey;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 25px;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: normal;
+    word-spacing: 7px;
+    text-shadow: 5px 5px 5px black;
 }
