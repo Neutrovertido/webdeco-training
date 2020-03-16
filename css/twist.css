@@ -1,27 +1,56 @@
 /* Twist Files Stylesheet */
 
 /* Dark Mode Font Behavior */
-*{
+* {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.fancy_title h2{
+/* Link States:
+a:active { }
+a:visited { }
+a:link { }
+*/
+
+a {
+    display: inline-block;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 10px 20px 10px 0px;
+    background: #3ba7e1;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0px 5px 0px #1d64a6;
+}
+
+a:hover {
+    /* This is also a link state, tho this one is used! */
+    color: #1d64a6;
+    box-shadow: 0px 3px 0px #1d64a6;
+}
+
+a:active {
+    color: white;
+    background: grey;
+    box-shadow: none;
+}
+
+.fancy_title h2 {
     display: inline;
     padding-left: 5px;
     padding-right: 5px;
 }
 
-.fancy_title #r{
+.fancy_title #r {
     color: red;
 }
 
-.fancy_title #g{
-    color: rgb(0, 255, 0)
+.fancy_title #g {
+    color: rgb(0, 255, 0);
 }
 
-.fancy_title #b{
-    color: #0000FF;
+.fancy_title #b {
+    color: #0000ff;
 }
 
 p {
