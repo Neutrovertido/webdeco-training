@@ -83,3 +83,13 @@ img {
     Border size:border: 2px solid white;
     This one also is dynamic bordering! :D */
 }
+
+ul{
+    /* List Items can also be labeled from CSS
+    list-style-type:disc ; */
+    list-style-position: inside;
+}
+
+ol{
+    list-style-type: decimal-leading-zero;
+}
