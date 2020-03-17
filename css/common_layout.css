@@ -1,0 +1,91 @@
+/* Test CSS Stylesheet */
+
+* {
+    font-family: Helvetica, sans-serif, Arial;
+    color: white;
+}
+
+body {
+    background: black;
+}
+
+/* Main Layout */
+
+/*Header (title or image in here) */
+.header{
+    background-color: #1f1f1f;
+    text-align: center;
+    padding: 5px;
+    font-size: 125%;
+    text-shadow: 5px 5px 5px black;
+}
+
+.card {
+    background-color: #757575;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Navigation bar and links properties */
+.navbar{
+    overflow: hidden;
+    background-color: lightslategray;
+    list-style: none;
+}
+
+.navbar a{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navbar a:hover{
+    background-color: #3f3f3f;
+    color: #e47712;
+}
+
+/* Content Columns properties */
+.columnleft{
+    float: left;
+    width: 75%;
+}
+
+.columnright{
+    float: left;
+    width: 25%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+/* Responsive Design for smaller screens */
+/* Content adjust */
+@media screen and (max-width: 800px) {
+    .columnleft, .columnright {   
+      width: 100%;
+      padding: 0;
+    }
+}
+
+/* Navigation Bar adjust */
+@media screen and (max-width: 400px) {
+    .navbar a {
+      float: none;
+      width: 100%;
+      text-align: left;
+    }
+}
+
+/* Footer Properties */
+.footer {
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+  }

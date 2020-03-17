@@ -1,0 +1,95 @@
+/* Twist Files Stylesheet */
+
+/* Dark Mode Font Behavior */
+* {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Link States:
+a:active { }
+a:visited { }
+a:link { }
+*/
+
+a {
+    display: inline-block;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 10px 20px 10px 0px;
+    background: #3ba7e1;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0px 5px 0px #1d64a6;
+}
+
+a:hover {
+    /* This is also a link state, tho this one is used! */
+    color: crimson;
+    box-shadow: 0px 3px 0px crimson;
+}
+
+a:active {
+    color: white;
+    background: crimson;
+    box-shadow: none;
+}
+
+.fancy_title h2 {
+    display: inline;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.fancy_title #r {
+    color: red;
+}
+
+.fancy_title #g {
+    color: rgb(0, 255, 0);
+}
+
+.fancy_title #b {
+    color: #0000ff;
+}
+
+p {
+    background-color: grey;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 25px;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: normal;
+    word-spacing: 7px;
+    text-shadow: 5px 5px 5px black;
+}
+
+div {
+    width: 100%;
+}
+
+img {
+    width: 30%;
+    height: auto;
+    margin: auto;
+    display: block;
+    border-radius: 50px;
+    /* Dynamic Shadows for borders :D */
+    box-shadow: 5px 5px 0px crimson;
+    
+    /* Border space by padding: padding: 5px;
+    Border size:border: 2px solid white;
+    This one also is dynamic bordering! :D */
+}
+
+ul{
+    /* List Items can also be labeled from CSS
+    list-style-type:disc ; */
+    list-style-position: inside;
+}
+
+ol{
+    list-style-type: decimal-leading-zero;
+}

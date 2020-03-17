@@ -1,0 +1,23 @@
+/* Flexbox CSS stylesheet */
+
+* {
+    color: white;
+    font-family: Helvetica, sans-serif, Arial;
+}
+
+body {
+    background: black;
+}
+
+#flex {
+   display: flex;
+   background: grey;
+   /* Horizontal align */
+   justify-content: space-evenly;
+   /* Vertical align */
+   align-items: center;
+   /* Direction */
+   /* flex-direction: column; converts to column layout */
+   flex-direction: row;
+}
+
