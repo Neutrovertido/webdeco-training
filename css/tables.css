@@ -37,6 +37,7 @@ caption {
 
 table tr:hover {
     background-color: lightseagreen;
+    cursor: pointer;
 }
 
 table td:hover {
