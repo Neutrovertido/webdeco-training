@@ -1,6 +1,6 @@
 /* Test CSS Stylesheet */
 /* CSS VARIABLES! */
-:root {
+:root { /* The content can also be located inside body { } */
     --fondo:#000000;
 }
 
