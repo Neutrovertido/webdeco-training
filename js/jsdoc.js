@@ -156,3 +156,29 @@ if (scopevar2 === 'Outside Scope') {
     console.log(scopevar2);
 }
 console.log(scopevar2);
+
+/* Arrays:
+var array = ['1',2,3.0,...];
+array.pop() Removes the last item
+array.length Tells the quantity of items in an array
+array.push(i1,i2,...) Adds items to the end of an array
+array.shift() Mutates the array in ascendent order
+array.unshift() Adds items to the start of an array
+array.slice(range1, range2) Returns a range of values in an array
+array.indexOf(value_that_you_want_to_know) Return the position of a value
+*/
+let arreg10 = ['First','Second','Third'];
+console.log(arreg10); // Prints the whole array
+console.log(arreg10[0]); // Prints a specific element of an array[0-N]
+console.log(arreg10.length);
+arreg10.push('Fourth','Fifth','Sixth');
+console.log(arreg10);
+arreg10.pop();
+console.log(arreg10);
+
+/* Multi-Dimensional Arrays
+An array can contain other arrays, for each array you can tell that it increases the quantity of dimensions 
+*/
+var dimensionQ = [[1,2,3],[4,5,6],[7,8,9]];
+console.log(dimensionQ);
+console.log(dimensionQ[2][1]);
