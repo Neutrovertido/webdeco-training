@@ -138,3 +138,21 @@ sumnot(7,8);
 
 const rsumnot = (rsumnot1, rsumnot2) => rsumnot1 + rsumnot2;
 console.log(rsumnot(8,9));
+
+/* Scope:
+The scope is the context where the variable can be used, there are global variables and local variables.
+When we talk about local variables we are referring to the block of code where it is inside, that block and the child blocks from that can access the variable, although the father ones cannot.
+*/
+
+let scopevar1 = 10; // This variable can be accessed globally since it's defined in the main block of code
+if (scopevar1 > 9) {
+    let msg = "Inside outside"; // This one can only be accessed from the if statemente and the child blocks but not the main block
+    console.log(msg);
+}
+// To use the same variable but with different scopes it's necessary to redefine it inside the local block of code
+let scopevar2 = "Outside Scope";
+if (scopevar2 === 'Outside Scope') {
+    let scopevar2 = "The inside scope doesn't affect the outside one!"
+    console.log(scopevar2);
+}
+console.log(scopevar2);
