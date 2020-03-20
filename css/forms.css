@@ -1,0 +1,60 @@
+:root {
+    --borde: #cccccc;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+h1 {
+    margin: 20px 0 0 20px;
+}
+
+body {
+    background-color: #272727;
+}
+
+/* Form Properties */
+form {
+    width: 35%;
+    border: 1px solid var(--borde);
+    margin: 20px;
+    padding: 20px;
+}
+
+label {
+    font-size: 12px;
+    display: block;
+    width: 100%;
+}
+
+input, textarea {
+    color: black;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    resize: vertical;
+    max-height: 300px;
+    min-height: 100px;
+}
+
+input:focus, textarea:focus {
+    border: 1px var(--borde) solid;
+}
+
+/* Special Button Properties and syntax */
+input[type="submit"] {
+    margin-bottom: 0;
+    background-color: #3e73b9;
+    color: white;
+    border: none;
+}
+
+input[type="submit"]:hover {
+    background-color: #559eff;
+    cursor: pointer;
+}

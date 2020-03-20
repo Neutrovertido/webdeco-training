@@ -1,0 +1,46 @@
+/* CSS Stylesheet */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+h1 {
+    text-align: center;
+}
+
+hr {
+    border: 1px solid green;
+}
+
+/* Table properties */
+table {
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    border: 1px solid blueviolet;
+    border-collapse: collapse; /* Eliminate space between borders and merge them */
+}
+
+table td  {
+    border: 1px solid lime;
+    padding: 15px;
+}
+
+caption {
+    border: 1px solid lime;
+    background-color: green;
+}
+
+table tr:hover {
+    background-color: lightseagreen;
+    cursor: pointer;
+}
+
+table td:hover {
+    background-color: white;
+    color: black;
+}

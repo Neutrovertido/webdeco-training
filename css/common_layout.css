@@ -1,4 +1,8 @@
 /* Test CSS Stylesheet */
+/* CSS VARIABLES! */
+:root { /* The content can also be located inside body { } */
+    --fondo:#000000;
+}
 
 * {
     font-family: Helvetica, sans-serif, Arial;
@@ -6,7 +10,7 @@
 }
 
 body {
-    background: black;
+    background: var(--fondo);
 }
 
 /* Main Layout */
