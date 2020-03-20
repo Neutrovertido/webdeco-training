@@ -194,7 +194,7 @@ for (let i=0; i<N; i++){}
 for (let i=100; i>0; i--){}
 while(condition){}
 do{}while(condition);
-break; It´s used to break the loop if needed
+break; It´s used to break the loop if needed (it's also used in switch)
 */
 
 for (let i = 0; i < 4; i++) {
