@@ -196,6 +196,7 @@ for (let i=100; i>0; i--){}
 while(condition){}
 do{}while(condition);
 break; It´s used to break the loop if needed (it's also used in switch)
+Also loops can hold other loops inside them
 */
 
 for (let i = 0; i < 4; i++) {
@@ -216,5 +217,11 @@ for (let i = 15; i > 0; i--) {
     if (i === 5) {
         console.log("Break here!");
         break;
+    }
+}
+
+for (let x=0; x>4; x++) {
+    for (let y=0; y>4; y++) {
+        console.log(`(${x} , ${y})`);
     }
 }
