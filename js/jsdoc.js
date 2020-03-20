@@ -220,8 +220,55 @@ for (let i = 15; i > 0; i--) {
     }
 }
 
-for (let x=0; x>4; x++) {
-    for (let y=0; y>4; y++) {
+for (let x = 0; x > 4; x++) {
+    for (let y = 0; y > 4; y++) {
         console.log(`(${x} , ${y})`);
     }
 }
+
+/* Iterators
+These are methods that allow you to execute functions with array elements (all of these functions have to use RETURN)
+All of the functions of the respective iterator MUST use a parameter which is passed by the array itself when the iterator is used
+The functions can be defined or be anonymous
+array.forEach(function); Passes each element of an array so that it can be used in a function
+array.map(function); Same as forEach, but creating a new array in the process
+array.filter(function()); Creates a new array in which only the elements that return true to a condtition are in
+array.findIndex(function); similar to indexOf. but with callback functions (used when you need to find a certain condition instead of a value)
+array.reduce(function); Operates with an array by taking values two by two and accumulating the return. You can also give it a starting value
+array.some(function); Tests if at least 1 element returns true from the condition given
+array.every(function); Same as some, but every element must return true from the condition
+*/
+
+let each4 = [5, 3, 2, 9, 7];
+function currentElement(temp){
+    console.log(`The current element is: ${temp}`);
+}
+each4.forEach(currentElement);
+
+console.log("Map output next!");
+const plus5Each = each4.map(temp => temp + 5);
+plus5Each.forEach(currentElement);
+
+console.log("Only even numbers this time!");
+const evenEach5 = plus5Each.filter(temp => temp % 2 === 0);
+evenEach5.forEach(currentElement);
+
+console.log("Now the location of the first uneven number!");
+const unevenEach = plus5Each.findIndex(temp => temp % 2 != 0);
+console.log(`The location is: [${unevenEach}]`);
+
+console.log("Accumulating the plus5 array...");
+const sumOfEach = plus5Each.reduce((value1, value2) => value1 + value2);
+console.log(sumOfEach);
+
+console.log("Accumulating the plus5 array with a starting value of 10...");
+const sumOfEachStarted = plus5Each.reduce((value1, value2) => {
+    return value1 + value2;
+}, 10);
+console.log(sumOfEachStarted);
+
+const isAnyOfThem1 = plus5Each.some(value => value === 1);
+console.log(`Is any of them 1: ${isAnyOfThem1}`);
+
+const areBiggerThan0 = plus5Each.every(value => value > 0);
+console.log(`Are all the numbers bigger than 0: ${areBiggerThan0}`);
