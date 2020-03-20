@@ -1,5 +1,4 @@
 // JavaScript Documentation by Neutrovertido
-// USE THIS: https://help.github.com/en/github/using-git/caching-your-github-password-in-git
 
 // Print values
 // To console (console.log(value); console.log("...${variable}...");)
