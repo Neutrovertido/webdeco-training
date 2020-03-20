@@ -1,4 +1,5 @@
 // JavaScript Documentation by Neutrovertido
+// Please run it on a NodeJS console to avoid discomfort from using the browser one
 
 // Print values
 // To console (console.log(value); console.log("...${variable}...");)
