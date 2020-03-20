@@ -118,26 +118,28 @@ Return Function:
 const variable = (params) => instructions;
 This one returns the value of the instructions
 */
-function tellmehi(){
+function tellmehi() {
     console.log("Hi!");
 }
 tellmehi();
 
-function add(add1, add2){
+function add(add1, add2) {
     return add1 + add2;
 }
 console.log(add(5, 7));
 
-const conca = function(str1, str2){
+const conca = function(str1, str2) {
     console.log(str1 + str2);
-}
-conca("Hello ","Friend!");
+};
+conca("Hello ", "Friend!");
 
-const sumnot = (sumnot1, sumnot2) =>{console.log(sumnot1 - sumnot2)}
-sumnot(7,8);
+const sumnot = (sumnot1, sumnot2) => {
+    console.log(sumnot1 - sumnot2);
+};
+sumnot(7, 8);
 
 const rsumnot = (rsumnot1, rsumnot2) => rsumnot1 + rsumnot2;
-console.log(rsumnot(8,9));
+console.log(rsumnot(8, 9));
 
 /* Scope:
 The scope is the context where the variable can be used, there are global variables and local variables.
@@ -151,8 +153,8 @@ if (scopevar1 > 9) {
 }
 // To use the same variable but with different scopes it's necessary to redefine it inside the local block of code
 let scopevar2 = "Outside Scope";
-if (scopevar2 === 'Outside Scope') {
-    let scopevar2 = "The inside scope doesn't affect the outside one!"
+if (scopevar2 === "Outside Scope") {
+    let scopevar2 = "The inside scope doesn't affect the outside one!";
     console.log(scopevar2);
 }
 console.log(scopevar2);
@@ -167,11 +169,11 @@ array.unshift() Adds items to the start of an array
 array.slice(range1, range2) Returns a range of values in an array
 array.indexOf(value_that_you_want_to_know) Return the position of a value
 */
-let arreg10 = ['First','Second','Third'];
+let arreg10 = ["First", "Second", "Third"];
 console.log(arreg10); // Prints the whole array
 console.log(arreg10[0]); // Prints a specific element of an array[0-N]
 console.log(arreg10.length);
-arreg10.push('Fourth','Fifth','Sixth');
+arreg10.push("Fourth", "Fifth", "Sixth");
 console.log(arreg10);
 arreg10.pop();
 console.log(arreg10);
@@ -179,6 +181,39 @@ console.log(arreg10);
 /* Multi-Dimensional Arrays
 An array can contain other arrays, for each array you can tell that it increases the quantity of dimensions 
 */
-var dimensionQ = [[1,2,3],[4,5,6],[7,8,9]];
+var dimensionQ = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
 console.log(dimensionQ);
 console.log(dimensionQ[2][1]);
+
+/* Loops
+for (let i=0; i<N; i++){}
+for (let i=100; i>0; i--){}
+while(condition){}
+do{}while(condition);
+break; It´s used to break the loop if needed
+*/
+
+for (let i = 0; i < 4; i++) {
+    console.log("This is the time #" + (i + 1));
+}
+
+let repetition = 5;
+while (repetition < 7) {
+    console.log("To stop there is no time");
+    repetition++;
+}
+
+do {
+    repetition--;
+} while (repetition != 0);
+
+for (let i = 15; i > 0; i--) {
+    if (i === 5) {
+        console.log("Break here!");
+        break;
+    }
+}
