@@ -95,4 +95,7 @@ input[type="button"]:hover {
     .nav {
         flex-direction: column;
     }
+    input {
+        padding: 2px;
+    }
 }
