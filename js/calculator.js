@@ -15,3 +15,7 @@ function igual() {
     var actual = document.pant.textview.value;
     actual ? document.pant.textview.value = eval(actual): null;
 }
+
+function aunNo() {
+    alert("Esta funcionalidad aun no ha sido agregada.");
+}
