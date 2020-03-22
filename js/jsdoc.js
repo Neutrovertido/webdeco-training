@@ -129,7 +129,7 @@ function add(add1, add2) {
 }
 console.log(add(5, 7));
 
-const conca = function(str1, str2) {
+const conca = function (str1, str2) {
     console.log(str1 + str2);
 };
 conca("Hello ", "Friend!");
@@ -240,7 +240,7 @@ array.every(function); Same as some, but every element must return true from the
 */
 
 let each4 = [5, 3, 2, 9, 7];
-function currentElement(temp){
+function currentElement(temp) {
     console.log(`The current element is: ${temp}`);
 }
 each4.forEach(currentElement);
@@ -272,3 +272,63 @@ console.log(`Is any of them 1: ${isAnyOfThem1}`);
 
 const areBiggerThan0 = plus5Each.every(value => value > 0);
 console.log(`Are all the numbers bigger than 0: ${areBiggerThan0}`);
+
+/* Objects 
+Objects are key and value variables
+var Object - {value1: 'actual_value', 'value 2': 'actual_value_2};
+To access a value it's necessary to use the . notation or bracket notation
+var variable = Object.property;
+To update a value you must use any notation and = to assign the value
+To delete a property you must use the delete operator (delete Object.property)
+It's also possible to declare a function inside of an Object and to reference: Object
+The objects can also hold another objects inside them
+It's also possible to asign the direct memory vale of an object by using a function which receives the object as a parameter (making possible to even change the value of a constant)
+It's possible to iterate properties inside an object with the for...in loop
+*/
+
+var persona = {
+    alive: true,
+    name: 'James',
+    age: 17,
+    'random message': 'Hello friend!',
+    saludar() {
+        console.log("Hola!");
+    },
+    health: {
+        canSee: true,
+        canHear: true,
+        canTaste: true,
+        canFeel: true,
+        canTalk: true
+    }
+}
+
+var personaLiving = persona.alive;
+personaLiving ? console.log("Alive") : console.log("Not alive");
+
+var personaMsg = persona['random message'];
+console.log(personaMsg);
+
+persona.age = 21;
+
+delete persona['random message'];
+
+persona.saludar();
+
+if (persona.health.canSee) {
+    console.log("Able to see!");
+} else {
+    console.log("Unable to see!");
+}
+
+const unname = obj => {
+    obj.name = null;
+}
+
+unname(persona);
+
+console.log(persona);
+
+for(var healthVal in persona.health) {
+    console.log(`${healthVal}: ${persona.health[healthVal]}`);
+};
