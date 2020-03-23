@@ -8,7 +8,7 @@
 // And by knowing that you can FIX the whole thing, so yeah, pretty powerful isn't it?
 console.log("Hello my typescript fellow!");
 
-function sayBlyat(){
+async function sayBlyat(){
     return "blyat";
 }
 
