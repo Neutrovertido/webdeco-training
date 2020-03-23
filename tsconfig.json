@@ -1,6 +1,7 @@
 {
-	"compilerOptions": {
-		"target": "ESNext",
-		"watch": true
-	}
+    "compilerOptions": {
+        "target": "ESNext",
+        "lib": ["DOM","ESNext"]
+    },
+    "include": ["ts"]
 }

@@ -9,17 +9,18 @@ When we compile it generates a new javascript file which shares the name of the 
 ` $ tsc (file_name.ts) ` 
 
 When using asycn await or other functions from newer versions of Javascript it's necessary to use this command and configure the .json that it generates so that it uses the newest version of Javascript:  
-` $ touch tsconfig.json `
+` $ touch tsconfig.json `  
+__Once the tsconfig.json is created, you must specify which files will be used, and the libraries so that it compiles them correctly.__
 
 ## tsconfig.json:
 Use this object in the .json file to __use the newest version of Javascript__ and be able to compile the __async await__ without any problems.  
 Also use watch so that the compiler seeks for changes and builds the .js file automatically.  
 Use lib array to signal which libraries are used on the file.  
   
-{  
-	"compilerOptions" :{  
-		target: "esnext",  
-		watch: true,  
-		lib: ["lib1", "lib2"]  
-	}  
-}  
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "lib": ["DOM","ESNext"]
+    },
+    "include": ["files_folder"]
+} 
