@@ -284,6 +284,9 @@ It's also possible to declare a function inside of an Object and to reference: O
 The objects can also hold another objects inside them
 It's also possible to asign the direct memory vale of an object by using a function which receives the object as a parameter (making possible to even change the value of a constant)
 It's possible to iterate properties inside an object with the for...in loop
+You cannot use arrow functions with the this keyword since they assign this to the callback itself
+The'this' keyword is used to reference an object whilst using a functions which is defined in itself
+You can define a variable with _ before the name to indicate it shouldn't be altered
 */
 
 var persona = {
@@ -329,6 +332,87 @@ unname(persona);
 
 console.log(persona);
 
-for(var healthVal in persona.health) {
+for (var healthVal in persona.health) {
     console.log(`${healthVal}: ${persona.health[healthVal]}`);
 };
+
+const rainbow = {
+    multicolor: true,
+    visible: false,
+    status() {
+        return `The status of multicolor is: ${this.multicolor} and the status of visible is: ${this.visible}`;
+    }
+};
+console.log(rainbow.status());
+
+// Getters and setters
+const cyborg = {
+    _original: "human",
+    _hp: 500,
+    get hp() {
+        if (typeof this._hp === "number") {
+            return `Current level of HP: ${this._hp}`;
+        } else {
+            return `Existencial error! Accidentally HP mutated from dimensions!`;
+        }
+    },
+    set hp(_novel) {
+        if (typeof this._hp === "number") {
+            this._hp = _novel;
+        } else {
+            console.log("Failure! Number expected at setting hp!");
+        }
+    }
+}
+console.log(cyborg.hp);
+cyborg.hp = 200;
+
+
+// Object Factories
+// These are methods that allow you to make objects by passing parameters
+const carFabrik = (brand, color) => {
+    return {
+        brand: brand, // Since ES6 it's possible to just do: brand, color, about(){...}
+        color: color,
+        about(){
+            console.log(`The brand of the car is ${brand} and the color of the car is ${color}.`);
+        }
+    }
+}
+
+let tunneableCar = carFabrik("BMW","black");
+tunneableCar.about();
+
+function tankFabrik(model, nation) {
+    return {
+        model,
+        nation,
+        shoot() {
+            console.log(`The ${model} shoots a projectile and destroyed the enemy!`);
+        },
+        celebrate() {
+            console.log(`${nation} celebrates for their victory!`);
+        }
+    }
+}
+
+const panzer = tankFabrik("Panzerkampfwagen","Germany");
+panzer.shoot();
+panzer.celebrate();
+
+// Object destructural reference
+// You can call an object property by using {} syntax
+const {nation} = panzer;
+console.log(nation);
+
+// Object methods
+/*
+Object.keys(object); returns the keys
+Object.entries(object); returns the keys and the values in a two-dimension array
+Object.assign({new_properties}, father_object); returns a new object with new properties in it
+*/
+
+console.log(Object.keys(panzer));
+console.log(Object.entries(panzer));
+
+const panzerV2 = Object.assign({rocketLauncher: true, advancedRadar: true}, panzer);
