@@ -416,3 +416,36 @@ console.log(Object.keys(panzer));
 console.log(Object.entries(panzer));
 
 const panzerV2 = Object.assign({rocketLauncher: true, advancedRadar: true}, panzer);
+
+// Classes
+// You can create a class by using the class statement
+class Cat {
+    // Class constructor
+    constructor(name) {
+        this._name = name;
+        this._tamed = false;
+    }
+
+    get name() {
+        return this._name;
+    }
+
+    get isTamed() {
+        return this._tamed;
+    }
+
+    doThing() {
+        console.log("Meow!");
+    }
+}
+
+// To create an object that will follow the class structure:
+const ryan = new Cat("Ryan");
+
+// Class inheritance
+class DomesticCat extends Cat {
+    constructor(name, domestic) {
+        super(name);
+        this._domestic = domestic;
+    }
+}
